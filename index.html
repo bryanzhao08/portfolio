@@ -1,20 +1,98 @@
-<h1>Hello, I'm Bryan!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #00aaff;
+    }
+    header {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #00aaff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #00aaff;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #444;
+      border-top: 1px solid #00aaff;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>bryan zhao</h1>
+    <p>roboticist | photographer | researcher</p>
+    <nav>
+      <a href="#photos">photos</a>
+      <a href="#robots">robots</a>
+      <a href="#about">other</a>
+    </nav>
+  </header>
 
-    <h3>About Me</h3>
-    <p>i enjoy robotics, photography, and cooking. My goal is to study ee+cs and help people with what i build.</p>
+  <section id="photos">
+    <h2>photography gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Photo 1">
+      <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="Photo 2">
+      <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Photo 3">
+    </div>
+  </section>
 
-    <h3>my hobbies</h3>
-    <ul>
-      <li>building robots</li>
-      <li>taking photos</li>
-      <li>debating </li>
-      <li>baking + cooking food</li>
-    </ul>
+  <section id="robots">
+    <h2>competition robots</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Robot+1" alt="Robot 1">
+      <img src="https://via.placeholder.com/400x300?text=Robot+2" alt="Robot 2">
+      <img src="https://via.placeholder.com/400x300?text=Robot+3" alt="Robot 3">
+    </div>
+  </section>
 
-    <h3>here's google</h3>
-    <p>
-      visit <a href="https://www.google.com">Google</a> to search the internet.
-    </p>
+  <section id="about">
+    <h2>about me</h2>
+    <p>tba</p>
+  </section>
 
-    <h3>Here's a Cool Image</h3>
-    <img src="https://media.istockphoto.com/id/916159418/photo/cute-kitten-portrait-british-shorthair-cat.jpg?s=2048x2048&w=is&k=20&c=iOPAvmRMZDybhTAiZKImxhNV09muypUuO3NzWbvuCXI=" alt="cat" width="300">
+  <footer>
+    &copy; 2025 bryan zhao | built w html
+  </footer>
+</body>
+</html>
