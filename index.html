@@ -4,125 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bryan zhao | portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 2rem;
-    }
-    header {
-      backdrop-filter: blur(20px);
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #00aaff;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      transition: background 0.3s;
-    }
-    nav a:hover,
-    nav a.active {
-      background: rgba(255, 255, 255, 0.15);
-    }
-    section {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 1rem;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 960px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      scroll-margin-top: 100px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 1rem;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
-    }
-    .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 1rem;
-    }
-    .lightbox.active {
-      display: flex;
-    }
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00aaff;
-      font-weight: bold;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
+    @font-face {
+      font-family: "SF Pro Display";
+      src: local("SF Pro Display"), url("https://bryanzhao08.github.io/portfolio/fonts/sf-pro.woff2") format("woff2");
+      font-weight: 400;
     }
   </style>
 </head>
@@ -140,26 +27,19 @@
   <section id="photos">
     <h2>photography gallery</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Photo 1">
-      <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="Photo 2">
-      <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Photo 3">
-      <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="Photo 4">
-      <img src="https://via.placeholder.com/400x300?text=Photo+5" alt="Photo 5">
-      <img src="https://via.placeholder.com/400x300?text=Photo+6" alt="Photo 6">
-      <img src="https://via.placeholder.com/400x300?text=Photo+7" alt="Photo 7">
-      <img src="https://via.placeholder.com/400x300?text=Photo+8" alt="Photo 8">
-      <img src="https://via.placeholder.com/400x300?text=Photo+9" alt="Photo 9">
-      <img src="https://via.placeholder.com/400x300?text=Photo+10" alt="Photo 10">
+      <img src="images/photography/photo_1.jpg" alt="Photo 1">
+      <img src="images/photography/photo_2.jpg" alt="Photo 2">
+      <img src="images/photography/photo_3.jpg" alt="Photo 3">
+      <img src="images/photography/photo_4.jpg" alt="Photo 4">
+      <img src="images/photography/photo_5.jpg" alt="Photo 5">
     </div>
   </section>
 
   <section id="robots">
     <h2>competition robots</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/400x300?text=Robot+1" alt="Robot 1">
-      <img src="https://via.placeholder.com/400x300?text=Robot+2" alt="Robot 2">
-      <img src="https://via.placeholder.com/400x300?text=Robot+3" alt="Robot 3">
-      <img src="https://via.placeholder.com/400x300?text=Robot+4" alt="Robot 4">
+      <img src="images/robots/robot_2.jpg" alt="Robot 2">
+      <img src="images/robots/robot_4.jpg" alt="Robot 4">
     </div>
   </section>
 

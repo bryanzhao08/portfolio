@@ -7,24 +7,24 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Times New Roman", serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #010c15, #031c2b);
+  color: #f0f4f8;
   padding: 2rem;
 }
 header {
   backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 10, 25, 0.7);
   border-radius: 1.5rem;
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 2rem;
 }
 header h1 {
   font-size: 3rem;
-  color: #00aaff;
+  color: #33aaff;
 }
 nav {
   display: flex;
@@ -45,14 +45,14 @@ nav a.active {
   background: rgba(255, 255, 255, 0.15);
 }
 section {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 960px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   scroll-margin-top: 100px;
 }
 .gallery {
@@ -64,10 +64,10 @@ section {
 .gallery img {
   width: 100%;
   height: auto;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 .gallery img:hover {
@@ -76,7 +76,7 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
 }
 .lightbox {
@@ -85,7 +85,7 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   display: none;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,7 @@ footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   border-radius: 50%;
   width: 50px;
@@ -111,7 +111,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00aaff;
+  color: #33aaff;
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
