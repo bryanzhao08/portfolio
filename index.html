@@ -5,43 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bryan zhao | portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    @font-face {
-      font-family: "SF Pro Display";
-      src: local("SF Pro Display"), url("https://bryanzhao08.github.io/portfolio/fonts/sf-pro.woff2") format("woff2");
-      font-weight: 400;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>bryan zhao</h1>
+    <h1>hey! i'm bryan zhao</h1>
     <p>roboticist | photographer | researcher</p>
     <nav>
-      <a href="#photos" class="nav-link">photos</a>
-      <a href="#robots" class="nav-link">robots</a>
-      <a href="#about" class="nav-link">about</a>
+      <a href="#photos">photos</a>
+      <a href="#robots">robots</a>
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
     </nav>
   </header>
 
   <section id="photos">
     <h2>photography gallery</h2>
     <div class="gallery">
-      <img src="images/photography/photo_1.jpg" alt="Photo 1">
-      <img src="images/photography/photo_2.jpg" alt="Photo 2">
-      <img src="images/photography/photo_3.jpg" alt="Photo 3">
-      <img src="images/photography/photo_4.jpg" alt="Photo 4">
-      <img src="images/photography/photo_5.jpg" alt="Photo 5">
+      <img src="images/photography/photo_1.jpg" alt="Coastal cliffs" data-caption="Captured on Kauai, Hawaii">
+      <img src="images/photography/photo_2.jpg" alt="Green moss" data-caption="Mossy tree bark after rainfall">
+      <img src="images/photography/photo_3.jpg" alt="Sea lions" data-caption="Resting sea lions on Pacific rocks">
+      <img src="images/photography/photo_4.jpg" alt="Fern leaves" data-caption="Fern-covered forest canopy">
+      <img src="images/photography/photo_5.jpg" alt="Turtle in water" data-caption="Turtle basking on shoreline">
     </div>
   </section>
 
   <section id="robots">
     <h2>competition robots</h2>
     <div class="gallery">
-      <img src="images/robots/robot_1.jpg" alt="Robot 1">
-      <img src="images/robots/robot_2.jpg" alt="Robot 2">
-      <img src="images/robots/robot_3.jpg" alt="Robot 3">
-      <img src="images/robots/robot_4.jpg" alt="Robot 4">
+      <img src="images/robots/robot_1.jpg" alt="Robot 1" data-caption="tba">
+      <img src="images/robots/robot_2.jpg" alt="Robot 2" data-caption="tba">
+      <img src="images/robots/robot_3.jpg" alt="Robot 3" data-caption="tba">
+      <img src="images/robots/robot_4.jpg" alt="Robot 4" data-caption="tba">
     </div>
   </section>
 
@@ -50,55 +44,46 @@
     <p>I'm Bryan, a robotics enthusiast and researcher passionate about combining engineering precision with visual storytelling. Whether designing world-class competitive robots or capturing fleeting light through a lens, I thrive at the intersection of art and technology. This portfolio showcases my commitment to both — a world built in code, circuits, and compositions.</p>
   </section>
 
+  <section id="experience">
+    <h2>experience</h2>
+    <div class="experience-entry">
+      <h3>Founder @ Robotics Club</h3>
+      <p>Led my team to national and international VEX competitions. Focused on innovation, design, and inclusive leadership.</p>
+    </div>
+    <div class="experience-entry">
+      <h3>Research Intern @ UCSC SIP</h3>
+      <p>Developed senior safety monitoring tools using Raspberry Pi and computer vision during the pandemic.</p>
+    </div>
+    <div class="experience-entry">
+      <h3>Creative Director @ Photography Collective</h3>
+      <p>Captured visual stories blending environmental themes with human emotion, exhibited in local galleries.</p>
+    </div>
+  </section>
+
   <footer>
-    &copy; 2025 bryan zhao | built w html
+    &copy; 2025 bryan zhao | built w html+css
   </footer>
 
   <div class="lightbox" id="lightbox">
     <img src="#" alt="preview">
+    <p id="caption"></p>
   </div>
-
-  <div id="backToTop">↑</div>
 
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
+    const caption = document.getElementById('caption');
+
     document.querySelectorAll('.gallery img').forEach(img => {
       img.addEventListener('click', () => {
         lightbox.classList.add('active');
         lightboxImg.src = img.src;
+        caption.textContent = img.dataset.caption || '';
       });
     });
+
     lightbox.addEventListener('click', () => {
       lightbox.classList.remove('active');
-    });
-
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 100;
-        const height = sec.offsetHeight;
-        if (top >= offset && top < offset + height) {
-          current = sec.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
     });
   </script>
 </body>
