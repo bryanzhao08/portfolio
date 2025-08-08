@@ -1,99 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-  background-color: #0c0c0e;
-  color: #eee;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  line-height: 1.6;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+  margin: 0;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
-header {
-  margin-bottom: 3rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-nav a {
-  margin-right: 1rem;
+a {
   text-decoration: none;
-  color: #aaa;
+  color: inherit;
 }
 
-section {
-  margin-bottom: 3rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-
-.gallery {
+/* Hero Banner */
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, #1db954, #121212, #1db954);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
-}
-
-.gallery img {
-  width: 220px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-.experience-entry {
-  margin-bottom: 1.5rem;
-}
-
-.experience-entry h3 {
-  margin-bottom: 0.2rem;
-}
-
-footer {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 4rem;
+  align-items: center;
   text-align: center;
 }
 
-.lightbox {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.hero-content p {
+  margin: 0.5rem 0 1rem;
+}
+
+.contacts a {
+  margin: 0 0.5rem;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Albums Grid */
+.albums {
   padding: 2rem;
 }
 
-.lightbox.active {
-  display: flex;
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 
-.lightbox img {
-  max-width: 90vw;
-  max-height: 80vh;
-  border-radius: 10px;
+.album-card {
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+  background-color: #282828;
+}
+
+.album-title {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+/* Sub-header for albums */
+.sub-header {
+  padding: 1rem 2rem;
+  background-color: #181818;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-size: 0.9rem;
+  color: #1db954;
+}
+
+/* Song list */
+.song-list {
+  padding: 2rem;
+}
+
+.song {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.lightbox p {
-  color: #ccc;
-  font-size: 1rem;
-  text-align: center;
+.song img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.song-title {
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: #aaa;
 }

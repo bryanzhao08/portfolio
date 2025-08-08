@@ -1,108 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bryan zhao | portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>hey! i'm bryan zhao</h1>
-    <p>roboticist | photographer | researcher</p>
-    <h5>in progress</h5>
-    <nav>
-      <a href="#photos">photos</a>
-      <a href="#robots">robots</a>
-      <a href="#about">about</a>
-      <a href="#experience">experience</a>
-    </nav>
+  <!-- Hero Banner -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>bryan zhao</h1>
+      <p>roboticist • photographer • researcher</p>
+      <div class="contacts">
+        <a href="mailto:bryanzhao08@gmail.com">email</a> •
+        <a href="https://github.com/bryanzhao08" target="_blank">github</a> •
+        <a href="https://instagram.com/bryanzhao08" target="_blank">instagram</a>
+      </div>
+    </div>
   </header>
 
-  <section id="photos">
-    <h2>photography gallery</h2>
-    <h5>adobe lightroom pls sponsor me</h5>
-    <h3>aerial</h3>
-    <div class="gallery">
-      <img src="images/photography/photo_1.jpg" alt="helicopter view of na pali" data-caption="kauai, hawaii">
-      <img src="images/photography/photo_6.jpg" alt="aerial view of san francisco bay area" data-caption="bay area, california">
-      <img src="images/photography/photo_7.jpg" alt="plane view of the rockies" data-caption="utah, united states">
-    </div>
-
-    <h3>nature</h3>
-    <div class="gallery">
-      <img src="images/photography/photo_2.jpg" alt="reclamation by nature" data-caption="hongkong, china">
-      <img src="images/photography/photo_3.jpg" alt="sea lions" data-caption="monterey, california">
-      <img src="images/photography/photo_4.jpg" alt="fern leaves" data-caption="santa cruz, california">
-      <img src="images/photography/photo_5.jpg" alt="turtle in water" data-caption="maui, hawaii">
-    </div>
-
-    <h3>school life</h3>
-    <div class="gallery">
-      <img src="images/photography/photo_8.jpg" alt="dancing duo" data-caption="saratoga, california">
-      <img src="images/photography/photo_9.jpg" alt="perspective" data-caption="saratoga, california">
-      <img src="images/photography/photo_10.jpg" alt="adrenaline" data-caption="saratoga, california">
-      <img src="images/photography/photo_11.jpg" alt="swish" data-caption="saratoga, california">
-      <img src="images/photography/photo_12.jpg" alt="soar" data-caption="saratoga, california">
-    </div>
-  </section>
-
-  <section id="robots">
-    <h2>competition robots</h2>
-    <div class="gallery">
-      <img src="images/robots/robot_1.jpg" alt="Robot 1" data-caption="tba">
-      <img src="images/robots/robot_2.jpg" alt="Robot 2" data-caption="tba">
-      <img src="images/robots/robot_3.jpg" alt="Robot 3" data-caption="tba">
-      <img src="images/robots/robot_4.jpg" alt="Robot 4" data-caption="tba">
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>about me</h2>
-    <p>i'm bryan, a robotics enthusiast and researcher passionate about combining engineering precision with visual storytelling.</p>
-  </section>
-
-  <section id="experience">
-    <h2>experience</h2>
-    <div class="experience-entry">
-      <h3>cofounder + captain @ saratoga vex robotics</h3>
-      <p>grew club membership, led team to national and international awards</p>
-    </div>
-    <div class="experience-entry">
-      <h3>research intern @ ucsc</h3>
-      <p>developed senior fall detection models; currently designing food science support tools</p>
-    </div>
-    <div class="experience-entry">
-      <h3>developer @ stanford hai</h3>
-      <p>developed neural network for aircraft taxiing error</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 bryan zhao | built w html+css
-  </footer>
-
-  <div class="lightbox" id="lightbox">
-    <img src="#" alt="preview">
-    <p id="caption"></p>
-  </div>
-
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const caption = document.getElementById('caption');
-
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        lightboxImg.src = img.src;
-        caption.textContent = img.dataset.caption || '';
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
-    });
-  </script>
+  <!-- Album Sections -->
+  <main>
+    <section class="albums">
+      <h2>albums</h2>
+      <div class="album-grid">
+        <a href="photography.html" class="album-card">
+          <img src="images/photography/photo_1.jpg" alt="photography">
+          <p class="album-title">photography</p>
+        </a>
+        <a href="robotics.html" class="album-card">
+          <img src="images/robots/robot_1.jpg" alt="robotics">
+          <p class="album-title">robotics</p>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
